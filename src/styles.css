@@ -1,0 +1,186 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  --font-sans: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+
+  --color-petrol: var(--petrol);
+  --color-petrol-deep: var(--petrol-deep);
+  --color-slate-blue: var(--slate-blue);
+  --color-terracotta: var(--terracotta);
+  --color-terracotta-deep: var(--terracotta-deep);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-graphite: var(--graphite);
+}
+
+:root {
+  --radius: 0.75rem;
+
+  /* Identidade Nathalia Pereira Dias */
+  --petrol: oklch(0.335 0.048 205);        /* #173F46 */
+  --petrol-deep: oklch(0.27 0.04 205);
+  --slate-blue: oklch(0.565 0.035 205);    /* #607D82 */
+  --terracotta: oklch(0.575 0.115 42);     /* #B7664D */
+  --terracotta-deep: oklch(0.50 0.11 42);
+  --cream: oklch(0.935 0.022 85);          /* #F3E9DC */
+  --cream-deep: oklch(0.90 0.03 82);
+  --graphite: oklch(0.30 0.005 60);        /* #343434 */
+
+  --background: var(--cream);
+  --foreground: var(--graphite);
+  --card: oklch(0.96 0.015 85);
+  --card-foreground: var(--graphite);
+  --popover: oklch(0.96 0.015 85);
+  --popover-foreground: var(--graphite);
+  --primary: var(--petrol);
+  --primary-foreground: var(--cream);
+  --secondary: oklch(0.90 0.03 82);
+  --secondary-foreground: var(--petrol);
+  --muted: oklch(0.90 0.025 85);
+  --muted-foreground: oklch(0.48 0.02 200);
+  --accent: var(--terracotta);
+  --accent-foreground: oklch(0.98 0.01 85);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.01 85);
+  --border: oklch(0.335 0.048 205 / 14%);
+  --input: oklch(0.335 0.048 205 / 20%);
+  --ring: var(--terracotta);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background-color: var(--terracotta);
+    color: var(--cream);
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: var(--font-display);
+    font-optical-sizing: auto;
+  }
+
+  .section-shell {
+    margin-inline: auto;
+    width: 100%;
+    max-width: 72rem;
+    padding-inline: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .section-shell {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    min-height: 3.25rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 9999px;
+    background-color: var(--terracotta);
+    color: var(--cream);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+    box-shadow: 0 10px 24px -12px color-mix(in oklab, var(--terracotta) 55%, transparent);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--terracotta-deep);
+    transform: translateY(-1px);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--terracotta-deep);
+    outline-offset: 3px;
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    min-height: 3.25rem;
+    padding: 0.875rem 1.75rem;
+    border-radius: 9999px;
+    border: 1.5px solid var(--petrol);
+    color: var(--petrol);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    transition: background-color 200ms ease, color 200ms ease, transform 200ms ease;
+  }
+
+  .btn-secondary:hover {
+    background-color: var(--petrol);
+    color: var(--cream);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--petrol);
+    outline-offset: 3px;
+  }
+
+  .eyebrow {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--slate-blue);
+  }
+}
