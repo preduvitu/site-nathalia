@@ -12,9 +12,9 @@ import {
   GraduationCap,
 } from "lucide-react";
 
-import heroPhoto from "../assets/nathalia-hero.jpg";
-import trabalhoPhoto from "../assets/nathalia-trabalho.jpg";
-import sobrePhoto from "../assets/nathalia-sobre.jpg";
+import heroPhoto from "../assets/nathalia-hero.jpeg";
+import trabalhoPhoto from "../assets/nathalia-trabalho.jpeg";
+import sobrePhoto from "../assets/nathalia-sobre.jpeg";
 import { WHATSAPP_URL, CRP } from "../lib/site";
 import { Palestras } from "../components/Palestras";
 
