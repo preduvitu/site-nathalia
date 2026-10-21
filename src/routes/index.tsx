@@ -25,6 +25,7 @@ const NAV = [
   { label: "Psicoterapia", href: "#psicoterapia" },
   { label: "Sobre mim", href: "#sobre" },
   { label: "Como funciona", href: "#como-funciona" },
+  { label: "Palestras", href: "#palestras" },
   { label: "Dúvidas", href: "#duvidas" },
   { label: "Contato", href: "#contato" },
 ];

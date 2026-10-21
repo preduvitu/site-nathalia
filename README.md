@@ -1,29 +1,48 @@
-# Welcome to your Lovable project
+# 🚀 Sobre o projeto
 
-This project was built with [Lovable](https://lovable.dev).
+Este projeto foi criado com o [Lovable](https://lovable.dev), uma ferramenta que ajuda a transformar ideias em aplicações web.
 
-## Build with Lovable
+## 🛠️ Como desenvolver
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Quer fazer alguma alteração ou adicionar novas funcionalidades? Você pode continuar o desenvolvimento diretamente pelo [Lovable](https://lovable.dev) ou rodar o projeto na sua máquina.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+### 💻 Rodando localmente
 
-## Development
+Antes de começar, você precisa ter o [Node.js](https://nodejs.org/) e o npm instalados. Se preferir, pode gerenciar a instalação do Node.js usando o [nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Com tudo pronto, siga os passos abaixo:
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+**1. Clone o repositório**
+```bash
+git clone <url-do-repositorio>
+```
+
+**2. Entre na pasta do projeto**
+```bash
+cd <nome-do-repositorio>
+```
+
+**3. Instale as dependências**
+```bash
+npm install
+```
+
+**4. Inicie o servidor de desenvolvimento**
+```bash
 npm run dev
 ```
 
-## Built with
+Pronto! 🎉 Agora é só acessar o endereço indicado no terminal e começar a explorar a aplicação.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## ⚙️ Tecnologias utilizadas
+
+O projeto utiliza as seguintes tecnologias:
+
+- **[TanStack Start](https://tanstack.com/start)** — estrutura para criar aplicações web modernas.
+- **[TypeScript](https://www.typescriptlang.org/)** — JavaScript com tipagem estática para um código mais seguro.
+- **[React](https://react.dev/)** — biblioteca para construir interfaces interativas.
+- **[Tailwind CSS](https://tailwindcss.com/)** — estilização rápida e prática com classes utilitárias.s
+
+---
+
+💡 **Dica:** antes de começar a desenvolver, confira os scripts disponíveis no arquivo `package.json` e veja se o projeto precisa de alguma configuração adicional.
